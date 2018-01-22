@@ -3,20 +3,16 @@ class Database{
 
     // specify your own database credentials
     private $host = "localhost";
+    private $port = "27017";
     private $db_name = "hellofresh";
-    private $username = "root";
-    private $password = "scorpio21189";
+    private $collection_name = "recipes";
 
-    // get the database connection
-    public function getConnection(){
-        $db = mysqli_connect($this->host, $this->username, $this->password, $this->db_name);
-        if (mysqli_connect_errno()) {
-            http_response_code(500);
-            die(json_encode(['error'=>mysqli_connect_error()]));
-        }
-        mysqli_set_charset($db,'utf8');
-
-        return $db;
+    // connect to a database and return collection
+    public function getCollection(){
+        $client = new MongoDB\Client("mongodb://".$this->host.":".$this->port);
+        $db = $client->selectDatabase($this->db_name);
+        $collection = $db->selectCollection($this->collection_name);
+        return $collection;
     }
 }
 ?>

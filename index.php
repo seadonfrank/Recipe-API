@@ -1,5 +1,7 @@
 <?php
 
+require 'vendor/autoload.php'; // include Composer's autoloader
+
 // get the HTTP method, path and body of the request
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
@@ -12,90 +14,97 @@ $params2 = $request[1];
 // connect to the database
 include_once 'database.php';
 $database = new Database();
-$link = $database->getConnection();
-$recipe_table = 'recipe';
-$rate_table = 'rate';
+$collection = $database->getCollection();
 
 // API authenticate
 include_once 'authenticate.php';
 $auth = new Authenticate();
 $auth->authenticate($_GET['token'], $method);
 
-// escape the columns and values from the input object
-$columns = preg_replace('/[^a-z0-9_]+/i','',array_keys($input));
-$values = array_map(function ($value) use ($link) {
-    if ($value===null) return null;
-    return mysqli_real_escape_string($link,(string)$value);
-},array_values($input));
-
-// build the SET part of the SQL command
-$set = '';
-for ($i=0;$i<count($columns);$i++) {
-    $set.=($i>0?',':'').'`'.$columns[$i].'`=';
-    $set.=($values[$i]===null?'NULL':'"'.$values[$i].'"');
-}
-
-//input validations to the route
+//validate parameters and perform operations
+$result=array('data'=>array(), 'success'=>false);
 if($params1 == 'search'){
     if($method == 'GET'){
-        $sql = "select * from `$recipe_table`".($params2?" WHERE name like '%$params2%'":'');
+        if($params2){
+            $data = $collection->find(array('name' => new \MongoDB\BSON\Regex("$params2","i")));
+        } else {
+            $data = $collection->find();
+        }
+        foreach($data as $k=>$v){
+            $result['data'][$k]['id'] = $v->id;
+            $result['data'][$k]['name'] = $v->name;
+            $result['data'][$k]['time'] = $v->time;
+            $result['data'][$k]['difficulty'] = $v->difficulty;
+            $result['data'][$k]['vegetarian'] = $v->vegetarian;
+            $result['data'][$k]['rating'] = $v->rating;
+        }
+        $result['success'] = true;
     }
 }else if($params1 == 'rate'){
-    switch ($method) {
-        case 'GET':
-            $sql = "select * from `$recipe_table` WHERE id=$params2";
-            $sql_rate = "select * from `$rate_table` WHERE recipe_id=$params2"; break;
-        case 'POST':
-            $sql = "insert into `$rate_table` set $set"; break;
+    if($method == 'POST'){
+        if ((int)$input['rate'] < 1 || (int)$input['rate'] > 5) {
+            http_response_code(400);
+            die(json_encode(['error'=>"Ratings should be a integer between 1 and 5"]));
+        }
+        $result['data'] = $collection->findOne(array('id' => $params2));
+        $result['data']['rating'][] = $input;
+        unset($result['data']['_id']);
+        $result['success'] = $collection->updateOne(array('id' => $params2), array('$set' => $result['data']))->isAcknowledged();
     }
 }else if($params1 == '' || (int)$params1 > 0){
     switch ($method){
         case 'GET':
-            $sql = "select * from `$recipe_table`".($params1?" WHERE id=$params1":''); break;
+            if($params1){
+                $result['data'] = $collection->findOne(array('id' => $params1));
+                unset($result['data']['_id']);
+                $result['success'] = true;
+            } else {
+                $data = $collection->find();
+                foreach($data as $k=>$v){
+                    $result['data'][$k]['id'] = $v->id;
+                    $result['data'][$k]['name'] = $v->name;
+                    $result['data'][$k]['time'] = $v->time;
+                    $result['data'][$k]['difficulty'] = $v->difficulty;
+                    $result['data'][$k]['vegetarian'] = $v->vegetarian;
+                    $result['data'][$k]['rating'] = $v->rating;
+                }
+                $result['success'] = true;
+            }
+            break;
         case 'PUT':
-            $sql = "update `$recipe_table` set $set where id=$params1"; break;
+            $result['data'] = $collection->findOne(array('id' => $params1));
+            foreach($input as $k => $v){
+                $result['data'][$k] = $v;
+            }
+            unset($result['data']['_id']);
+            $result['success'] = $collection->updateOne(array('id' => $params1), array('$set' => $result['data']))->isAcknowledged();
+            break;
         case 'PATCH':
-            $sql = "update `$recipe_table` set $set where id=$params1"; break;
+            $result['data'] = $collection->findOne(array('id' => $params1));
+            foreach($input as $k => $v){
+                $result['data'][$k] = $v;
+            }
+            unset($result['data']['_id']);
+            $result['success'] = $collection->updateOne(array('id' => $params1), array('$set' => $result['data']))->isAcknowledged();
+            break;
         case 'POST':
-            $sql = "insert into `$recipe_table` set $set"; break;
+            $result['data'] = array_merge($input, array('id'=>uniqid()));
+            $result['success'] = $collection->insertOne($result['data'])->isAcknowledged();
+            break;
         case 'DELETE':
-            $sql = "delete `$recipe_table` where id=$params1"; break;
+            $result['success'] = $collection->deleteOne(array('id'=>$params1))->isAcknowledged();
+            break;
     }
 }else{
     http_response_code(404);
     die(json_encode(['error'=>'Invalid Parameters']));
 }
 
-// execute SQL statement
-$result = mysqli_query($link,$sql);
-if($params1 == 'rate' && $sql_rate != ''){
-    $result_rate = mysqli_query($link,$sql_rate);
-}
-
-// die if SQL statement failed
-if (!$result) {
-    http_response_code(404);
-    die(json_encode(['error'=>mysqli_error()]));
-}
-
-// print results, insert id or affected row count
-if ($method == 'GET') {
-    $results['recipe'] = array();
-    for ($i=0;$i<mysqli_num_rows($result);$i++) {
-        $results['recipe'][] = mysqli_fetch_object($result);
-    }
-    if($params1 == 'rate'){
-        $results['rate'] = array();
-        for ($i=0;$i<mysqli_num_rows($result_rate);$i++) {
-            $results['rate'][] = mysqli_fetch_object($result_rate);
-        }
-    }
-    echo json_encode($results);
-} elseif ($method == 'POST') {
-    echo mysqli_insert_id($link);
+// printing the output
+if (!$result['success']) {
+    http_response_code(500);
+    die(json_encode(['error'=>"Database Failure"]));
 } else {
-    echo mysqli_affected_rows($link);
+    http_response_code(200);
+    die(json_encode($result));
 }
-
-// close mysql connection
-mysqli_close($link);

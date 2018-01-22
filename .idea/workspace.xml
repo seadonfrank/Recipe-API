@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4d2dc61-a46c-4b0a-9878-3bbcc41c248f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.php" afterPath="$PROJECT_DIR$/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,42 +14,55 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="126">
+              <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-              <folding>
-                <marker date="1516540067040" expanded="true" signature="1204:1233" ph="select * fro... ${$recipe_table}" />
-                <marker date="1516540067040" expanded="true" signature="1381:1420" ph="select * fro... ${$recipe_table}" />
-                <marker date="1516540067040" expanded="true" signature="1456:1500" ph="select * fro... ${$rate_table}" />
-                <marker date="1516540067040" expanded="true" signature="1559:1589" ph="insert into `${$rate_table}`... " />
-                <marker date="1516540067040" expanded="true" signature="1718:1747" ph="select * fro... ${$recipe_table}" />
-                <marker date="1516540067040" expanded="true" signature="1832:1873" ph="update `${$r... " />
-                <marker date="1516540067040" expanded="true" signature="1933:1974" ph="update `${$r... " />
-                <marker date="1516540067040" expanded="true" signature="2033:2065" ph="insert into `${$recipe_table}`... " />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authenticate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authenticate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
+            <state relative-caret-position="18">
               <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding />
             </state>
@@ -73,6 +88,9 @@
       <find>$table</find>
       <find>$request[0]</find>
       <find>$sql_rate</find>
+      <find>$result</find>
+      <find>$ratings_collection</find>
+      <find>$collection</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,11 +106,12 @@
         <option value="$PROJECT_DIR$/read.php" />
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/database.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/rate.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/database.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -102,10 +121,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
-    <option name="y" value="-11" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
     <option name="width" value="1319" />
     <option name="height" value="780" />
   </component>
@@ -125,22 +147,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipe" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="recipes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="recipes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,6 +187,14 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -206,15 +233,6 @@
       <PhpTestRunnerSettings />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -239,6 +257,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c4d2dc61-a46c-4b0a-9878-3bbcc41c248f" name="Default" comment="" />
@@ -251,26 +272,28 @@
       <workItem from="1516518184732" duration="791000" />
       <workItem from="1516521112434" duration="6605000" />
       <workItem from="1516536103475" duration="1004000" />
+      <workItem from="1516591508734" duration="14949000" />
+      <workItem from="1516608121435" duration="329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28193000" />
+    <option name="totallyTimeSpent" value="43471000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="-11" width="1319" height="780" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22265932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15795149" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -281,7 +304,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -291,6 +314,89 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="648">
+            <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="68" column="35" lean-forward="false" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -315,28 +421,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rate.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
           <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-          <folding>
-            <marker date="1516540067040" expanded="true" signature="1204:1233" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1381:1420" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1456:1500" ph="select * fro... ${$rate_table}" />
-            <marker date="1516540067040" expanded="true" signature="1559:1589" ph="insert into `${$rate_table}`... " />
-            <marker date="1516540067040" expanded="true" signature="1718:1747" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1832:1873" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="1933:1974" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="2033:2065" ph="insert into `${$recipe_table}`... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -357,28 +447,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php" />
-    <entry file="file://$PROJECT_DIR$/rate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rate.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1516540067040" expanded="true" signature="1204:1233" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1381:1420" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1456:1500" ph="select * fro... ${$rate_table}" />
-            <marker date="1516540067040" expanded="true" signature="1559:1589" ph="insert into `${$rate_table}`... " />
-            <marker date="1516540067040" expanded="true" signature="1718:1747" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1832:1873" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="1933:1974" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="2033:2065" ph="insert into `${$recipe_table}`... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -399,28 +473,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php" />
-    <entry file="file://$PROJECT_DIR$/rate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rate.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <marker date="1516540067040" expanded="true" signature="1204:1233" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1381:1420" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1456:1500" ph="select * fro... ${$rate_table}" />
-            <marker date="1516540067040" expanded="true" signature="1559:1589" ph="insert into `${$rate_table}`... " />
-            <marker date="1516540067040" expanded="true" signature="1718:1747" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1832:1873" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="1933:1974" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="2033:2065" ph="insert into `${$recipe_table}`... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -438,16 +496,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <marker date="1516540067040" expanded="true" signature="1204:1233" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1381:1420" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1456:1500" ph="select * fro... ${$rate_table}" />
-            <marker date="1516540067040" expanded="true" signature="1559:1589" ph="insert into `${$rate_table}`... " />
-            <marker date="1516540067040" expanded="true" signature="1718:1747" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1832:1873" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="1933:1974" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="2033:2065" ph="insert into `${$recipe_table}`... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -471,43 +520,46 @@
     <entry file="file://$PROJECT_DIR$/read.php" />
     <entry file="file://$PROJECT_DIR$/composer.json" />
     <entry file="file://$PROJECT_DIR$/search.php" />
-    <entry file="file://$PROJECT_DIR$/database.php">
+    <entry file="file://$PROJECT_DIR$/rate.php" />
+    <entry file="file://$PROJECT_DIR$/authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-          <folding>
-            <marker date="1516540067040" expanded="true" signature="1204:1233" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1381:1420" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1456:1500" ph="select * fro... ${$rate_table}" />
-            <marker date="1516540067040" expanded="true" signature="1559:1589" ph="insert into `${$rate_table}`... " />
-            <marker date="1516540067040" expanded="true" signature="1718:1747" ph="select * fro... ${$recipe_table}" />
-            <marker date="1516540067040" expanded="true" signature="1832:1873" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="1933:1974" ph="update `${$r... " />
-            <marker date="1516540067040" expanded="true" signature="2033:2065" ph="insert into `${$recipe_table}`... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
+        <state relative-caret-position="18">
           <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding />
         </state>
       </provider>
